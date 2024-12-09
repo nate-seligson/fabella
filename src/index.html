@@ -6,8 +6,12 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <div class = "flex mono flex-row w-full flex-auto justify-center bg-blue-800 font-mono p-10 relative">
+    <div id = "l" class = "border border-black w-max m-8 mr-0 p-7 whitespace-pre text-sm">Loading...</div>
+    <div id = "r" class = "border border-black w-max m-8 ml-0 p-7 whitespace-pre text-sm">Loading...</div>
+  </div>
+  <h1 id = "pagecount" class = "text-lg font-bold">0/0</h1>
+  <button id = "next" class = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">next</button>
+<script type = "module" src = "main.js"></script>
 </body>
 </html>
