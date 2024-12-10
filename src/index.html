@@ -6,12 +6,37 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <div class = "flex mono flex-row w-full flex-auto justify-center bg-blue-800 font-mono p-10 relative">
-    <div id = "l" class = "border border-black w-max m-8 mr-0 p-7 whitespace-pre text-sm">Loading...</div>
-    <div id = "r" class = "border border-black w-max m-8 ml-0 p-7 whitespace-pre text-sm">Loading...</div>
+  <div class = "flex lg:flex-row flex-col w-full">
+    <div class = "flex flex-col lg:w-1/2 w-full place-items-center bg-cornsilk">
+        <h1 class = "text-9xl p-20 pb-10 text-center font-bold font-merriweather italic hover:tracking-widest transition-all ease-in-out">Fabula</h1>
+        <h1 class = "text-4xl m-10 mt-0 w-fit text-center p-5 rounded-3xl font-semibold italic font-merriweather bg-moss text-cornsilk hover:tracking-widest transition-all ease-in-out">Daily Curated Short Stories</h1>
+        <h1 class = "text-6xl m-10 w-max text-center p-5 rounded-3xl font-semibold italic font-merriweather bg-pakistan text-cornsilk hover:tracking-widest transition-all ease-in-out">Read Below<br><strong class = "not-italic font-mono"><br>|<br>V</strong></h1>
+    </div>
+    <div class = "flex flex-col p-10 bg-cornsilk lg:w-1/2 w-full justify-around relative">
+        <div class = "group text-lg mt-5 no-underline not-italic bg-moss h-40 hover:h-1/2 w-full transition-all ease-in-out rounded-3xl p-5 text-cornsilk flex flex-col gap-5">
+            <h1 class = "bg-pakistan w-full rounded-full text-3xl text-cornsilk p-10 group-hover:underline underline-offset-8 italic">One Short Story Per Day.</h1>
+            <p class = "p-4">Thats right--You are given 24 hours to read the short story before it dissapears forever. Get to reading before it's gone for good!</p>
+        </div>
+        <div class = "group text-lg mt-5 no-underline not-italic bg-moss h-40 hover:h-1/2 w-full transition-all ease-in-out rounded-3xl p-5 text-cornsilk flex flex-col gap-5">
+            <h1 class = "bg-pakistan w-full ounded-full text-3xl text-cornsilk p-10 group-hover:underline underline-offset-8 italic">Today's Story:</h1>
+            <p class = "p-4 font-extrabold text-center opacity-0 group-hover:opacity-100">SCANDAL IN BOHEMIA<br><br>Arthur Conan Doyle</p>
+        </div>
+    </div>
   </div>
-  <h1 id = "pagecount" class = "text-lg font-bold">0/0</h1>
-  <button id = "next" class = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">next</button>
+  <div class = "flex flex-col bg-bronze place-items-center border-[20px]">
+    <p id = "timer" class = "text-lg font-bold font-merriweather text-center m-5 p-5 bg-tiger w-max tracking-widest rounded-full transition-all ease">00:00:00</p>
+    <div class = "flex flex-wrap flex-row w-full flex-auto justify-center p-10 relative font-merriweather">
+        <div class = "bg-[url('./paperbg.jpg')] border-4 rounded-lg border-black w-max m-8 lg:mr-0 p-10 whitespace-pre lg:text-md text-sm relative">
+            <div id = "l">Loading...</div>
+            <button id = "back" class = "absolute bottom-0 left-0 bg-pakistan text-cornsilk p-2 m-5 transition-all ease-in rounded-none shadow-2xl hover:rounded-[75px]">back</button>
+        </div>
+        <div class = "bg-[url('./paperbg.jpg')] border-4 rounded-lg border-black w-max m-8 lg:ml-0 p-10 whitespace-pre lg:text-md text-sm relative">
+            <div id = "r">Loading...</div>
+            <button id = "next" class = "absolute bottom-0 right-0 bg-pakistan text-cornsilk p-2 m-5 transition-all ease-in rounded-none shadow-2xl hover:rounded-[75px]">next</button>
+        </div>
+    </div>
+    <h1 id = "pagecount" class = "text-lg font-bold font-merriweather text-center m-5 p-5 bg-tiger w-24 tracking-widest hover:w-64 rounded-full overflow-clip whitespace-pre hover:whitespace-nowrap transition-all ease">0</h1>
+  </div>
 <script type = "module" src = "main.js"></script>
 </body>
 </html>
