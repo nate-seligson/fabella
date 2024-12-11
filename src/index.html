@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <link href="./anims.css" rel="stylesheet">
 </head>
 <body>
   <div class = "flex lg:flex-row flex-col w-full">
@@ -25,14 +26,14 @@
   </div>
   <div class = "flex flex-col bg-bronze place-items-center border-[20px]">
     <p id = "timer" class = "text-lg font-bold font-merriweather text-center m-5 p-5 bg-tiger w-max tracking-widest rounded-full transition-all ease">00:00:00</p>
-    <div class = "flex flex-wrap flex-row w-full flex-auto justify-center p-10 relative font-merriweather">
-        <div class = "bg-[url('./paperbg.jpg')] border-4 rounded-lg border-black w-max m-8 lg:mr-0 p-10 whitespace-pre lg:text-md text-sm relative">
-            <div id = "l">Loading...</div>
-            <button id = "back" class = "absolute bottom-0 left-0 bg-pakistan text-cornsilk p-2 m-5 transition-all ease-in rounded-none shadow-2xl hover:rounded-[75px]">back</button>
+    <div class = "flex flex-row w-full flex-auto justify-center relative font-merriweather">
+        <div class = "bg-[url('./paperbg.jpg')] border-4 z-10 rounded-lg border-black w-max mr-0 p-10 lg:whitespace-pre whitespace-pre-wrap md:text-xl relative">
+            <div id = "l" class="bg-cornsilk">Loading...</div>
+            <button id = "back" class = "absolute bottom-0 sm:left-0 left-5 bg-pakistan text-cornsilk p-2 m-5 transition-all ease-in rounded-none shadow-2xl hover:rounded-[75px]">back</button>
+            <button id = "next" class = "absolute bottom-0 lg:right-[-100%] sm:right-0 right-5 z-10 bg-pakistan text-cornsilk p-2 m-5 transition-all ease-in rounded-none shadow-2xl hover:rounded-[75px]">next</button>
         </div>
-        <div class = "bg-[url('./paperbg.jpg')] border-4 rounded-lg border-black w-max m-8 lg:ml-0 p-10 whitespace-pre lg:text-md text-sm relative">
-            <div id = "r">Loading...</div>
-            <button id = "next" class = "absolute bottom-0 right-0 bg-pakistan text-cornsilk p-2 m-5 transition-all ease-in rounded-none shadow-2xl hover:rounded-[75px]">next</button>
+        <div class = "bg-[url('./paperbg.jpg')] border-4 z-0 rounded-lg border-black w-max ml-0 p-10 lg:whitespace-pre whitespace-pre-wrap md:text-xl relative lg:block hidden">
+            <div id = "r" class="bg-cornsilk">Loading...</div>
         </div>
     </div>
     <h1 id = "pagecount" class = "text-lg font-bold font-merriweather text-center m-5 p-5 bg-tiger w-24 tracking-widest hover:w-64 rounded-full overflow-clip whitespace-pre hover:whitespace-nowrap transition-all ease">0</h1>
