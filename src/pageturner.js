@@ -1,6 +1,6 @@
 let index = 0;
 export function turnPage(story){
-    if(window.innerWidth >= 1024){ 
+    if(window.innerWidth >= 1024 && index + 2 < story.maxPages){ 
         document.getElementById("r").style.animation="flip 0.5s linear"
         document.getElementById("l").style.animation="unflip 0.5s linear"
         index+=2;
@@ -13,7 +13,11 @@ export function turnPage(story){
             document.getElementById("l").style.animation="none";
         },500)
     }
-    else{index++}
+    else{
+        index++;
+        story.writeSlice("l", index);
+        story.writeSlice("r", index+1)
+    }
     //update page count
     if(index < story.maxPages){
         document.getElementById("pagecount").innerHTML = `Page ${index}   out of ${story.maxPages + 1}`
@@ -27,7 +31,7 @@ export function goBack(story){
     if(index <= 0){
         return;
     }
-    if(window.innerWidth >= 1024){
+    if(window.innerWidth >= 1024 && index > 1){
         document.getElementById("r").style.animation="flip 0.5s linear 0s 1 reverse"
         document.getElementById("l").style.animation="unflip 0.5s linear 0s 1 reverse"
         story.writeSlice("r", index-2)
@@ -44,7 +48,7 @@ export function goBack(story){
     }
     else{
         story.writeSlice("l", index - 1);
-        story.writeSlice("r",index - 1);
+        story.writeSlice("r",index);
         index--;
     }
     document.getElementById("pagecount").innerHTML = `Page ${index}   out of ${story.maxPages + 1}`
